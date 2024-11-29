@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NewTaskSheet">
+
+        <TextView
+            android:id="@+id/newTaskText"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="New Task"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="226dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/material_dynamic_tertiary70"
+            android:text="Save"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addDueDateText" />
+
+        <TextView
+            android:id="@+id/addTimeBlockText"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginTop="25dp"
+            android:text="Add Time Block"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/addRoutineText"
+            app:layout_constraintStart_toStartOf="@+id/addRoutineText"
+            app:layout_constraintTop_toBottomOf="@+id/addRoutineText" />
+
+        <Spinner
+            android:id="@+id/spinnerTimeBlock"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addTimeBlockText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addTimeBlockText"
+            app:layout_constraintTop_toTopOf="@+id/addTimeBlockText" />
+
+        <Spinner
+            android:id="@+id/spinnerRoutine"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addRoutineText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addRoutineText"
+            app:layout_constraintTop_toTopOf="@+id/addRoutineText" />
+
+        <TextView
+            android:id="@+id/addDueDateText"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginTop="25dp"
+            android:text="Add Due Date"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/addTimeBlockText"
+            app:layout_constraintStart_toStartOf="@+id/addTimeBlockText"
+            app:layout_constraintTop_toBottomOf="@+id/addTimeBlockText" />
+
+        <TextView
+            android:id="@+id/addRoutineText"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Add Routine"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberPickerMinutes" />
+
+        <TextView
+            android:id="@+id/textMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minutes:"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/numberPickerMinutes"
+            app:layout_constraintEnd_toEndOf="@+id/numberPickerMinutes"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/numberPickerMinutes" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/numberPickerMinutes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/numberPickerMinutes"
+            app:layout_constraintTop_toBottomOf="@+id/textMinutes" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="376dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:hint="Name"
+            app:layout_constraintEnd_toEndOf="@+id/newTaskText"
+            app:layout_constraintStart_toStartOf="@+id/newTaskText"
+            app:layout_constraintTop_toBottomOf="@+id/newTaskText" />
+
+        <TextView
+            android:id="@+id/textHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours"
+            app:layout_constraintBottom_toTopOf="@+id/numberPickerHours"
+            app:layout_constraintEnd_toEndOf="@+id/numberPickerHours"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/numberPickerHours" />
+
+        <ImageButton
+            android:id="@+id/addDueDateButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="45dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addDueDateText"
+            app:layout_constraintStart_toEndOf="@+id/addDueDateText"
+            app:srcCompat="@drawable/baseline_add_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

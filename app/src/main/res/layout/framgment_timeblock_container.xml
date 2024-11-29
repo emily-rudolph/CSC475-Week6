@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/material_dynamic_secondary50">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTimeBlock"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <TextView
+        android:id="@+id/textTimeBlockName"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Block"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewTimeBlock"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewTimeBlock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:ems="10"
+        android:text=""
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewTimeBlock"
+        app:layout_constraintStart_toStartOf="@+id/editEndTime" />
+
+    <TextView
+        android:id="@+id/editEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:ems="10"
+        android:text=""
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewTimeBlock"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTimeBlock" />
+
+    <ImageButton
+        android:id="@+id/deleteButtonTimeBlock"
+        style="@style/Base.Theme.Week3CriticalThinking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/material_dynamic_secondary50"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewTimeBlock"
+        app:layout_constraintStart_toEndOf="@+id/textTimeBlockName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_delete_forever_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

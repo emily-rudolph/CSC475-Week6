@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="365dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/material_dynamic_secondary70">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRoutine"
+        android:visibility="visible"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textRoutineName"
+        style="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="Routine Name"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewRoutine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/deleteButtonRoutine"
+        style="@style/Base.Theme.Week3CriticalThinking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/material_dynamic_secondary70"
+        app:layout_constraintBottom_toBottomOf="@+id/textRoutineName"
+        app:layout_constraintStart_toEndOf="@+id/textRoutineName"
+        app:layout_constraintTop_toTopOf="@+id/textRoutineName"
+        app:srcCompat="@drawable/baseline_delete_forever_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
